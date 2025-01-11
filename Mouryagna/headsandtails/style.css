@@ -23,6 +23,7 @@ main {
     border: none;
     background-color: rgb(173, 223, 103);
     border-radius: 36px;
+    cursor: pointer;
 }
 .win-lose {
     font-size: 18px;
@@ -42,5 +43,6 @@ main {
     padding: 8px 12px;
     width: 150px;
     font-size: 18px;
-    border-radius: 50px; 
+    border-radius: 50px;
+    cursor: pointer; 
 }

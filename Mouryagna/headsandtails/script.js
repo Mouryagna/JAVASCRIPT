@@ -47,7 +47,7 @@ function playerMove(toss) {
     updateScore();
 
     document.querySelector('.move')
-        .innerHTML = `player: ${toss}- computer: ${computerMove}`;
+        .innerHTML = `player: ${toss}- Guess: ${computerMove}`;
 }
 function updateScore() {
     document.querySelector('.js-score')
