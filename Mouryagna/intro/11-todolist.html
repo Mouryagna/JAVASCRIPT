@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todolist</title>
+    <link rel="stylesheet" href="css/11-todolist.css">
 </head>
 <body>
     <p>Todo List</p>
-    <input placeholder="Todo name" class="js-name-input">
-    <button onclick="
-        addTodo()
-    ">Add</button>
-    <div class="js-todolist"></div>
+    <div class="todo-input-grid">
+        <input placeholder="Todo name" class="js-name-input name-input">
+        <input type="date" class="js-due-date-input due-date-input">
+        <button class="add-button" onclick="
+            addTodo()
+        ">Add</button>
+    </div>
+    <div class="js-todolist todo-grid"></div>
     <script src="script/11-todolist.js"></script>
 </body>
 </html>
