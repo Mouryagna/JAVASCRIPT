@@ -43,17 +43,30 @@
 
 
         /* setTimout(function(), time in ms);*/
-        setTimeout(function() {
+        /*setTimeout(function() {
             console.log('timeout');
             console.log('timeout2');
         }, 3000);
         console.log('nextline');
 
         /*setInterval(function(), num in ms);*/
-        setInterval(function() {
+        /*setInterval(function() {
             console.log('interval');
         }, 3000);
-        console.log('nextline2');
+        console.log('nextline2');*/
+
+        /*foreach(); is a loop method*/
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach(function(value,index) {
+            if(value === 'wash dishes') {
+                return;
+            }
+            console.log(index);
+            console.log(value);
+        });
     </script>
 </body>
 </html>

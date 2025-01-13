@@ -89,3 +89,26 @@ function pickComputer() {
     }
 
 }
+
+let isAutoPlaying = false;
+let intervalID;
+function autoplay() {
+    if(!isAutoPlaying) {
+        intervalID = setInterval(function() {
+            const playerMove = pickComputer();
+            playGame(playerMove);
+        }, 1000);
+        isAutoPlaying = true;
+    } else {
+        clearInterval(intervalID);
+        isAutoPlaying= false;
+    }
+}
+
+function autoplay() {
+    setInterval(function() {
+        const playerMove = pickComputer();
+        playGame(playerMove);
+    }, 1000);
+    
+}
