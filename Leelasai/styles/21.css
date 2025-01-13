@@ -1,0 +1,60 @@
+body{
+    font-family: Roboto;
+    margin: 0;
+    background-color: rgb(228, 228, 228);
+}
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    background-color: rgb(255, 25, 0);
+}
+
+.side-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    background-color: rgb(255, 25, 0);
+}
+.play{
+    position: absolute;
+    top: 70px;
+    left: 4px;
+    background-color: rgb(255, 25, 0);
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+    padding: 0;
+    cursor: pointer;
+}
+.play:hover{
+    background-color: rgb(213, 7, 0);
+}
+.play:active{
+    border: none;
+    background-color: rgb(255, 0, 0);
+}
+.img{
+    background: transparent;
+    width: 30px;
+}
+
+
+
+.main-part{
+    position: relative;
+    margin-left: 40px;
+    margin-top: 50px;
+    padding: 0;
+}
+.player-css{
+    position: absolute;
+    right: 50%;
+}
+.player-cards{
+    background-color: white;
+}
