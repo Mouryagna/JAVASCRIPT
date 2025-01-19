@@ -15,7 +15,7 @@ function addTodo() {
 function renderTodoList() {
     let todoListHTML='';
 
-    todolist.forEach(function(todoObject,index) {
+    todolist.forEach((todoObject,index) => {
         const name= todoObject.name;
         const dueDate= todoObject.dueDate;
         const html=`

@@ -104,11 +104,15 @@ function autoplay() {
         isAutoPlaying= false;
     }
 }
+/*const autoplay = () => {
 
+}*/
 function autoplay() {
-    setInterval(function() {
-        const playerMove = pickComputer();
-        playGame(playerMove);
-    }, 1000);
+    if(!isAutoPlaying) {
+        setInterval(() => {
+            const playerMove = pickComputer();
+            playGame(playerMove);
+        }, 1000);
+    }
     
 }
