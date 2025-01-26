@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(243,243,243);
+    margin: 0;
+    font-family: roboto,arial;
+}
+.game-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.move {
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 175px;
+}
+.player {
+    text-align: center;
+    font-size: 18px;
+}
+.reset {
+    background-color: rgb(143,143,43);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px; 
+    margin-left: 18px;
+}
