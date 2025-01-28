@@ -16,61 +16,61 @@ let player=(value) => {
         }
         return playerMove.innerHTML;
 }
-document.querySelector('.a').addEventListener('click',()=> {
-    player('a'); 
+document.querySelector('.a1').addEventListener('click',()=> {
+    player('a1'); 
     
     result();
 });
-document.querySelector('.b').addEventListener('click',()=> {
-    player('b');
+document.querySelector('.a2').addEventListener('click',()=> {
+    player('a2');
     
     result();
 });
-document.querySelector('.c').addEventListener('click',()=> {
-    player('c');
+document.querySelector('.a3').addEventListener('click',()=> {
+    player('a3');
     
     result();
 });
-document.querySelector('.d').addEventListener('click',()=> {
-    player('d');
+document.querySelector('.a4').addEventListener('click',()=> {
+    player('a4');
     
     result();
 });
-document.querySelector('.e').addEventListener('click',()=> {
-    player('e');
+document.querySelector('.a5').addEventListener('click',()=> {
+    player('a5');
     
     result();
 });
-document.querySelector('.f').addEventListener('click',()=> {
-    player('f');
+document.querySelector('.a6').addEventListener('click',()=> {
+    player('a6');
     
     result();
 });
-document.querySelector('.g').addEventListener('click',()=> {
-    player('g');
+document.querySelector('.a7').addEventListener('click',()=> {
+    player('a7');
     
     result();
 });
-document.querySelector('.h').addEventListener('click',()=> {
-    player('h');
+document.querySelector('.a8').addEventListener('click',()=> {
+    player('a8');
     
     result();
 });
-document.querySelector('.i').addEventListener('click',()=> {
-    player('i');
+document.querySelector('.a9').addEventListener('click',()=> {
+    player('a9');
     
     result();
 });
 let playerLastMove = () => {
-    const p1=document.querySelector('.a').innerHTML;
-    const p2=document.querySelector('.b').innerHTML;
-    const p3=document.querySelector('.c').innerHTML;
-    const p4=document.querySelector('.d').innerHTML;
-    const p5=document.querySelector('.e').innerHTML;
-    const p6=document.querySelector('.f').innerHTML;
-    const p7=document.querySelector('.g').innerHTML;
-    const p8=document.querySelector('.h').innerHTML;
-    const p9=document.querySelector('.i').innerHTML;
+    const p1=document.querySelector('.a1').innerHTML;
+    const p2=document.querySelector('.a2').innerHTML;
+    const p3=document.querySelector('.a3').innerHTML;
+    const p4=document.querySelector('.a4').innerHTML;
+    const p5=document.querySelector('.a5').innerHTML;
+    const p6=document.querySelector('.a6').innerHTML;
+    const p7=document.querySelector('.a7').innerHTML;
+    const p8=document.querySelector('.a8').innerHTML;
+    const p9=document.querySelector('.a9').innerHTML;
     if(p1===p2 && p1===p3 && p1=== 'X') {
         return 'player1';
     }
@@ -131,3 +131,13 @@ let result=() => {
         winner.innerHTML='Player 2 Won';
     }
 }
+reset= ()=> {
+    for(let i=1;i<=9;i++) {
+        document.querySelector(`.a${i}`).classList.remove('x-button');
+        document.querySelector(`.a${i}`).classList.remove('o-button');
+        document.querySelector(`.a${i}`).innerHTML='';
+    }
+}
+document.querySelector('.reset').addEventListener('click',()=> {
+    reset();
+})
