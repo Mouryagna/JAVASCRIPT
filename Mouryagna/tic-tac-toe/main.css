@@ -26,3 +26,19 @@ body {
     font-size: 18px; 
     margin-left: 18px;
 }
+.x-button {
+    height: 200px;
+    background-color: red;
+    border: 1px solid black;
+    cursor: pointer;
+    color: white;
+    font-size: 175px;
+}
+.o-button {
+    height: 200px;
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 175px;
+}
