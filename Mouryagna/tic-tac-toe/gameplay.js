@@ -2,13 +2,13 @@ let playervalue=document.querySelector('.js-player');
 playervalue.innerHTML='player 1';
 let player=(value) => {
         const playerMove=document.querySelector(`.${value}`);
-        if(playervalue.innerHTML === 'player 1') {
+        if(playervalue.innerHTML === 'player 1'&& playerMove.innerHTML === '') {
             playerMove.innerHTML=`X`;
             playerMove.classList.remove('o-button');
             playerMove.classList.add('x-button');
             playervalue.innerHTML='player 2';
         }
-        else if(playervalue.innerHTML === 'player 2') {
+        else if(playervalue.innerHTML === 'player 2'&& playerMove.innerHTML === '') {
             playerMove.innerHTML=`O`;
             playerMove.classList.remove('x-button');
             playerMove.classList.add('o-button');
