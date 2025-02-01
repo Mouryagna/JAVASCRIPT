@@ -10,17 +10,40 @@
     <link rel="stylesheet" href="start.css">
 </head>
 <body>
-    <p class="x">X</p>
     <div class="display">
         <p class="game-name">Tic Tac Toe</p>
-        <div>
+        <div class="play-button">
             <a href="tic-tac-toe.html">
-                <button class="play-game">O</button></a>
-            
+                <button class="play-game">O</button>
+            </a>
             <button class="exit">X</button>
         </div>
     </div>
-    <p class="o">O</p>
-    
+    <script>
+        function hovering() {
+            const playGameButton = document.querySelector('.play-game');
+
+            playGameButton.addEventListener('mouseover', () => {
+                playGameButton.innerHTML = 'Start';
+            });
+
+            playGameButton.addEventListener('mouseout', () => {
+                playGameButton.innerHTML = 'O';
+            });
+
+            const exitGame = document.querySelector('.exit');
+
+            exitGame.addEventListener('mouseover', () => {
+                exitGame.innerHTML = 'Exit';
+            });
+
+            exitGame.addEventListener('mouseout', () => {
+                exitGame.innerHTML = 'X';
+            });
+        }
+        setInterval(function() {
+            hovering();
+        },0.5);
+    </script>
 </body>
 </html>

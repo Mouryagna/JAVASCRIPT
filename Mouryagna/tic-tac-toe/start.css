@@ -6,7 +6,7 @@ body {
     font-family: roboto,arial;
     background-color: #FF8F00;
     display: flex;
-    justify-content: center;
+    justify-self: center;
 }
 .game-name {
     color: rgb(83, 25, 218);
@@ -19,6 +19,7 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     font-weight: bold;
+    margin-bottom: 15px;
     border-radius: 18px;
     color: white;
     background-color: rgb(72, 72, 223);
@@ -26,38 +27,21 @@ body {
     cursor: pointer;
     transition: background-color 0.15s;
 }
-.exit {
-    margin-left: 15px;
-}
 .play-game:hover,.exit:hover {
     background-color: rgb(93, 93, 237);
 }
 .play-game:active,.exit:active {
     background-color: rgb(29, 29, 252);
 }
-.x {
-    font-size: 250px;
-    width: 0;
-    top: 0;
-    margin:0;
-    padding: 0;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-.o {
-    font-size: 250px;
-    color: white;
-    margin: 0;
-    padding: 0;;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+.play-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .display {
     display: flex;
-    flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
