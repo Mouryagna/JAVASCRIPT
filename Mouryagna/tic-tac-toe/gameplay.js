@@ -1,16 +1,21 @@
 let playervalue=document.querySelector('.js-player');
 playervalue.innerHTML='player 1';
+playervalue.classList.add('red');
 let player=(value) => {
         const playerMove=document.querySelector(`.${value}`);
-        if(playervalue.innerHTML === 'player 1' && playervalue.innerHTML==='') {
+        if(playervalue.innerHTML === 'player 1' && playerMove.innerHTML==='') {
             playerMove.innerHTML=`X`;
             playerMove.classList.add('x-button');
             playervalue.innerHTML='player 2';
+            playervalue.classList.add('blue');
+            playervalue.classList.remove('red');
         }
-        else if(playervalue.innerHTML === 'player 2' && playervalue.innerHTML==='') {
+        else if(playervalue.innerHTML === 'player 2' && playerMove.innerHTML==='') {
             playerMove.innerHTML=`O`;
             playerMove.classList.add('o-button');
             playervalue.innerHTML = 'player 1';
+            playervalue.classList.add('red');
+            playervalue.classList.remove('blue');
         }
 }
 document.querySelector('.a1').addEventListener('click',()=> {
@@ -155,3 +160,44 @@ function playAgain() {
     document.querySelector('.normal').classList.remove('normal');
     reset();
 }
+document.body.addEventListener('keydown',(event => {
+    if(event.key === '1') {
+        player('a1'); 
+        result();
+    }
+    else if(event.key === '2') {
+        player('a2'); 
+        result();
+    }
+    else if(event.key === '3') {
+        player('a3'); 
+        result();
+    }
+    else if(event.key === '4') {
+        player('a4'); 
+        result();
+    }
+    else if(event.key === '5') {
+        player('a5'); 
+        result();
+    }
+    else if(event.key === '6') {
+        player('a6'); 
+        result();
+    }
+    else if(event.key === '7') {
+        player('a7'); 
+        result();
+    }
+    else if(event.key === '8') {
+        player('a8'); 
+        result();
+    }
+    else if(event.key === '9') {
+        player('a9'); 
+        result();
+    }
+    if(event.key === 'r') {
+        reset();
+    }
+}));
