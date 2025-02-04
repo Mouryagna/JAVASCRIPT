@@ -135,6 +135,8 @@ reset= ()=> {
         document.querySelector(`.a${i}`).innerHTML='';
     }
     playervalue.innerHTML='player 1';
+    playervalue.classList.add('red');
+    playervalue.classList.remove('blue');
 }
 document.querySelector('.reset').addEventListener('click',()=> {
     reset();  
@@ -197,7 +199,7 @@ document.body.addEventListener('keydown',(event => {
         player('a9'); 
         result();
     }
-    if(event.key === 'r') {
+    if(event.key === 'r' || event.key === '0') {
         reset();
     }
 }));
