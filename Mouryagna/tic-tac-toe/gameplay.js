@@ -163,15 +163,15 @@ function playAgain() {
     reset();
 }
 document.body.addEventListener('keydown',(event => {
-    if(event.key === '1') {
+    if(event.key === '7') {
         player('a1'); 
         result();
     }
-    else if(event.key === '2') {
+    else if(event.key === '8') {
         player('a2'); 
         result();
     }
-    else if(event.key === '3') {
+    else if(event.key === '9') {
         player('a3'); 
         result();
     }
@@ -187,15 +187,15 @@ document.body.addEventListener('keydown',(event => {
         player('a6'); 
         result();
     }
-    else if(event.key === '7') {
+    else if(event.key === '1') {
         player('a7'); 
         result();
     }
-    else if(event.key === '8') {
+    else if(event.key === '2') {
         player('a8'); 
         result();
     }
-    else if(event.key === '9') {
+    else if(event.key === '3') {
         player('a9'); 
         result();
     }

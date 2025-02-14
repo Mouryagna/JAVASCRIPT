@@ -1,47 +1,67 @@
-html, body {
-    height: 100%; 
-}
 body {
-    margin: 0;
     font-family: roboto,arial;
-    background-color: #FF8F00;
-    display: flex;
-    justify-self: center;
-}
-.game-name {
-    color: rgb(83, 25, 218);
-    font-size: 50px;
-    font-weight: bold;
-    cursor: default;
-}
-.play-game,.exit {
-    font-size: 78px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    border-radius: 18px;
-    color: white;
-    background-color: rgb(72, 72, 223);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.15s;
-}
-.play-game:hover,.exit:hover {
-    background-color: rgb(93, 93, 237);
-}
-.play-game:active,.exit:active {
-    background-color: rgb(29, 29, 252);
-}
-.play-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    background: linear-gradient(#FF8F00,rgb(83, 25, 218));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .display {
+    background-color: transparent;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    transform: translateY(300px);
+    font-size: 36px;
+    font-weight: bold;
+}
+.round-1,.round-2 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(rgb(83, 25, 218),#FF8F00);
+    border-radius: 50%;
+    margin: 8px;
+    text-align: center;
+    font-size: 200px;
+    color: white;
+    cursor: default;
+    animation: move 2s ease-in-out backwards;
+    cursor: pointer;
+    transition: width 0.15ms, height 0.15ms, font-family 0.15ms;
+}
+.round-1:hover,.round-2:hover {
+    width: 275px;
+    height: 275px;
+    font-family: 250px;
+    text-align: center;
+}
+@keyframes move {
+    from{
+        width: 0;
+        height: 0;
+        font-size: 0;
+    }
+}
+.round-1 {
+    top: 0;
+    left: 0;
+}
+.round-2 {
+    bottom: 0;
+    right: 0;
+}
+.play-game,.exit {
+    padding: 15px;
+    background-color: rgb(83, 25, 218);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    cursor: pointer;
+    width: 150px;
+}
+.game-name {
+    color: white;
 }

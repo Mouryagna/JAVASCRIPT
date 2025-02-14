@@ -11,6 +11,8 @@
     <link rel="website icon" href="images/wallpaper.jpg" type="png">
 </head>
 <body>
+    <div class="round-1">X</div>
+    <div class="round-2">O</div>
     <div class="display">
         <p class="game-name">Tic Tac Toe</p>
         <div class="play-button">
@@ -23,24 +25,27 @@
     <script>
         function hovering() {
             const playGameButton = document.querySelector('.play-game');
-
-            playGameButton.addEventListener('mouseover', () => {
+            setTimeout(function() {
+                playGameButton.addEventListener('mouseover', () => {
                 playGameButton.innerHTML = 'Start';
-            });
+                });
 
-            playGameButton.addEventListener('mouseout', () => {
+                playGameButton.addEventListener('mouseout', () => {
                 playGameButton.innerHTML = 'O';
-            });
+                });
+            },1000);
 
             const exitGame = document.querySelector('.exit');
 
-            exitGame.addEventListener('mouseover', () => {
+            setTimeout(function() {
+                exitGame.addEventListener('mouseover', () => {
                 exitGame.innerHTML = 'Exit';
-            });
+                });
 
-            exitGame.addEventListener('mouseout', () => {
-                exitGame.innerHTML = 'X';
-            });
+                exitGame.addEventListener('mouseout', () => {
+                    exitGame.innerHTML = 'X';
+                });
+            },1000);
         }
         setInterval(function() {
             hovering();
