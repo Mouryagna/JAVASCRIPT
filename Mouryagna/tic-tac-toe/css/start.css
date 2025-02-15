@@ -26,21 +26,44 @@ body {
     font-size: 200px;
     color: white;
     cursor: default;
-    animation: move 2s ease-in-out backwards;
+    animation: move 2s ease-in-out alternate;
     cursor: pointer;
     transition: width 0.15ms, height 0.15ms, font-family 0.15ms;
+    z-index: 0;
 }
-.round-1:hover,.round-2:hover {
-    width: 275px;
-    height: 275px;
-    font-family: 250px;
-    text-align: center;
+.round-1:hover {
+    animation: sidemove-x 2s ease-in-out 0.15ms backwards;
 }
+.round-2:hover {
+    animation: sidemove-o 2s ease-in-out 0.15ms backwards;
+}
+
 @keyframes move {
     from{
         width: 0;
         height: 0;
         font-size: 0;
+    }
+    to {
+        width: 250px;
+        height: 250px;
+        font-size: 200px;
+    }
+}
+@keyframes sidemove-x {
+    from {
+        transform: translate(0px);
+    }
+    to {
+        transform: translate(100%);
+    }
+}
+@keyframes sidemove-o {
+    from {
+        transform: translate(0px);
+    }
+    to {
+        transform: translate(-100%);
     }
 }
 .round-1 {
@@ -61,7 +84,33 @@ body {
     font-size: 36px;
     cursor: pointer;
     width: 150px;
+    box-shadow: none;
+    outline: none;
 }
 .game-name {
     color: white;
+}
+.play-button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.about {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 18px;
+    padding: 8px;
+    background-color: #FF8F00;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.about-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

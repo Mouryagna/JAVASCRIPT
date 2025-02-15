@@ -113,6 +113,11 @@ let playerLastMove = () => {
     else if(p3===p5 && p7===p3 && p7=== 'O') {
         return 'player2';
     }
+    else if(p1!='' && p2!='' && p3!='' && p4!='' && p5!='' && p6!='' && p7!='' && p8!='' && p9!='') {
+        setTimeout(function() {
+            reset();
+        },750);
+    }
 }
 let result=() => {
     let value=playerLastMove();
