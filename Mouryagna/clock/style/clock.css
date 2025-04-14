@@ -71,7 +71,7 @@
     color: white;
     margin-top: 22px;
     margin-bottom: 22px;
-    margin-left: 46%;
+    text-align: center;
 }
 .bar {
     display: flex;

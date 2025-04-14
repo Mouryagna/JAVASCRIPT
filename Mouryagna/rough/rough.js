@@ -1,11 +1,10 @@
-let box=document.querySelector('.hello');
-const hi=() => {
-    box.innerHTML=`<button onclick="remove();">hello</button>
-    <button>hi</button>`;
-}
-document.querySelector('.bb').addEventListener('click',() => {
-    hi();
-});
-function remove() {
-    box.innerHTML='';
-}
+document.getElementById('myform').addEventListener('submit',(event)=> {
+    event.preventDefault();
+    let emailCheck=document.myfrom.mail.value;
+    if(emailCheck.indexOf('@')!==-1 && emailCheck.indexOf('.')!==-1) {
+        document.querySelector('.display').innerHTML="valid";
+    }
+    else {
+        document.querySelector('.display').innerHTML="invalid";
+    }
+})
