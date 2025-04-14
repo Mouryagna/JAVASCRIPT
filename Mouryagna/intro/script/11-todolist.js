@@ -31,3 +31,4 @@ function renderTodoList() {
     document.querySelector('.js-todolist')
         .innerHTML=todoListHTML;
 }
+console.log(todolist);
