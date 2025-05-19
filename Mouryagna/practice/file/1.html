@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" name="n" id="n" onchange="x();">
+    <div class="m"></div>
+    <script>
+        
+        function x() {
+            let a=document.getElementById('n');
+            document.querySelector('.m').innerHTML=a.value;
+        }
+    </script>
 </body>
 </html>
